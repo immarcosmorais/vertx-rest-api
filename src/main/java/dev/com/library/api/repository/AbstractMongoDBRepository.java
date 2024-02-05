@@ -114,7 +114,7 @@ public abstract class AbstractMongoDBRepository<Entity> {
           if (res.result().getDocMatched() == 0) {
             emitter.onError(new NoSuchElementException("Model not found"));
           } else {
-            emitter.onSuccess(afterUpdateOrCreate(res.result().toJson(), id));
+            emitter.onSuccess(afterUpdateOrCreate(docJson, id));
           }
         } else {
           emitter.onError(res.cause());

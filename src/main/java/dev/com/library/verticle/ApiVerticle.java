@@ -22,7 +22,7 @@ public class ApiVerticle extends AbstractVerticle {
 
   @Override
   public void start(Promise<Void> promise) {
-    final MongoClient client = DbUtils.createMongoClient(vertx);
+    final MongoClient client = DbUtils.createMongoDBClient(vertx);
 
     final BookRepository bookRepository = new BookRepository(client);
     final BookService bookService = new BookService(bookRepository);

@@ -20,7 +20,7 @@ public class DbUtils {
   }
 
 
-  public static MongoClient createMongoClient(final Vertx vertx) {
+  public static MongoClient createMongoDBClient(final Vertx vertx) {
     final Properties properties = ConfigUtils.getInstance().getProperties();
     final JsonObject config = new JsonObject()
       .put("host", properties.getProperty(HOST_CONFIG))

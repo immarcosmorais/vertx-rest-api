@@ -37,5 +37,4 @@ public class Book extends AbstractEntity {
   @JsonProperty(IMAGE_LINK)
   private String imageLink;
 
-
 }
